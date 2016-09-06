@@ -1,18 +1,30 @@
-<h1>Edit Book</h1>
+<h1>Edit Book <%= @book.id %></h1>
 
-<p>
-	<strong>Title: </strong><br>
-	<%= @book.title %>
-</p>
+<%= form_for @book do |f| %>
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
 
-<p>
-	<strong>Author: </strong><br>
-	<%= @book.author %>
-</p>
+	<p>
+		<%= f.label :author %><br>
+		<%= f.text_field :author %>
+	</p>
 
-<p>
-	<strong>Description: </strong><br>
-	<%= @book.description %>
-</p>
+	<p>
+		<%= f.label :description %><br>
+		<%= f.text_area :description %>
+	</p>
 
-<%= link_to 'Back', show_book_path %>
+	<p>
+		<%= f.label :likes %><br>
+		<%= f.text_field :likes %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>
+
+<%= link_to 'Back', book_path %>
