@@ -2,19 +2,10 @@
 
 <%= link_to 'New Book', new_book_path %><br><br>
 
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Author</th>
-		<th>Likes</th>
-	</tr>
-
-	<% @books.each do |b| %>
-		<tr>
-			<td><%= b.title %></td>
-			<td><%= b.author %></td>
-			<td><%= b.likes %></td>
-			<td><%= link_to 'View', book_path(b) %></td>
-		</tr>
-	<% end %>
-</table>
+<% @books.each do |b| %>
+	<div class="book_wrapper">
+		<h3><%= link_to b.title, b %></h3>
+		By: <%= b.author %>
+		Likes: <%= b.likes %>
+	</div>
+<% end %>
