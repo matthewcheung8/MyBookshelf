@@ -1,51 +1,30 @@
-<h1><%= @book.title %></h1>
+<h1><i><%= @book.title %></i></h1>
 
 <p>
 	Posted on: <%= @book.created_at.strftime("%B %d, %y") %>
 </p>
 
 <p>
-	<strong>Author: </strong><br>
+	<strong>Author: </strong>
 	<%= @book.author %>
 </p>
 
 <p>
-	<strong>Description: </strong><br>
+	<strong>Description: </strong>
 	<%= @book.description %>
 </p>
 
 <p>
-	<strong>Likes: </strong><br>
+	<strong>Likes: </strong>
 	<%= @book.likes %>
 </p>
 
-<h2>Comments</h2>
-<% @book.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
- 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
+<p>Comment:</p>
+<%= render 'comments/form' %>
 
-<h2>Add a comment:</h2>
-<%= form_for([@book, @book.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<p>Comments</p>
+<%= render @book.comments %>
+
 
 <%= link_to 'Edit', edit_book_path %>
 <%= link_to 'Back', books_path %>

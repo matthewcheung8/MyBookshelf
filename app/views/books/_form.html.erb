@@ -1,6 +1,4 @@
-<h1>Edit <i><%= @book.title %></i></h1>
-
-<%= form_for :book, url: books_path do |f| %>
+<%= form_for :book do |f| %>
 	<p>
 		<%= f.label :title %><br>
 		<%= f.text_field :title %>
@@ -26,6 +24,3 @@
 	</p>
 
 <% end %>
-
-<%= link_to 'Delete', book_path, method: :delete, data: { confirm: 'Are you sure?'} %>
-<%= link_to 'Back', book_path %>

@@ -1,10 +1,10 @@
-<h1>Books</h1>
+<h1>Books Feed</h1>
 
 <%= link_to 'New Book', new_book_path %><br><br>
 
 <% @books.each do |b| %>
 	<div class="book_wrapper">
-		<h3><%= link_to b.title, b %></h3>
+		<h3><i><%= link_to b.title, b %></i></h3>
 		By: <%= b.author %>
 		Likes: <%= b.likes %>
 	</div>
