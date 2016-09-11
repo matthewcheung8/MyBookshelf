@@ -1,24 +1,11 @@
-# README
+#MyBookshelf
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###What this is?
+Rails web application that allows users to share books they have enjoyed to other people. Post, comment, like away!
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###What I learned:
+- Routes
+- REST principles
+- Heroku deployment
+- Bcrypt gem for authentication
+- Secure Sockets Layer for information protection over networks
