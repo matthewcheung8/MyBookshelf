@@ -6665,3 +6665,63 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/new" for ::1 at 2016-09-10 23:31:32 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2016-09-10 23:31:40 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3lnMqzUmcq+IFHB1ZGdzNfhj/P4KUwZGTeW5YuHpPAVW84Qb6iKgSDUzcK4KLnQzHz+hO7O6rgTOKZobe7BcwA==", "user"=>{"name"=>"Jonathan", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jonathan"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?)[0m  [["name", "Jonathan"], ["created_at", 2016-09-11 06:31:40 UTC], ["updated_at", 2016-09-11 06:31:40 UTC], ["password_digest", "$2a$10$jTg9bkzUmL/cA2sxlpC/jugh63HBufcWYw0EWjYoRJ832aP3ugaV2"]]
+  [1m[35m (18.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 105ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/users/3" for ::1 at 2016-09-10 23:31:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 90ms (Views: 84.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for ::1 at 2016-09-10 23:32:02 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3lnMqzUmcq+IFHB1ZGdzNfhj/P4KUwZGTeW5YuHpPAVW84Qb6iKgSDUzcK4KLnQzHz+hO7O6rgTOKZobe7BcwA==", "user"=>{"name"=>"Justin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Justin"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?)[0m  [["name", "Justin"], ["created_at", 2016-09-11 06:32:02 UTC], ["updated_at", 2016-09-11 06:32:02 UTC], ["password_digest", "$2a$10$fePJeA28KCiGaJRH56xBTO3WI0H/OQZupBOL9H8BmsuGV0Ewzu7QO"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 90ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/users/4" for ::1 at 2016-09-10 23:32:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_book_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_book_id' AND type='index'
+[0m
