@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 	root 'books#index'
-	get 'books', to: 'books#index'
-	get 'signup', to: 'users#new'
-	post 'signup', to: 'users#create'
+	get '/books', to: 'books#index'
+	get '/signup', to: 'users#new'
+	post '/signup', to: 'users#create'
 	resources :users
 	resources :books do
 		resources :comments
