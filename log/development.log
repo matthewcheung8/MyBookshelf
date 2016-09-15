@@ -6725,3 +6725,79 @@ Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.2ms)
             FROM sqlite_temp_master
             WHERE name='index_comments_on_book_id' AND type='index'
 [0m
+Started GET "/posts/new" for ::1 at 2016-09-15 12:51:16 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [28 times] (16.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (129.7ms)
+Started GET "/" for ::1 at 2016-09-15 12:54:44 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 306ms (Views: 294.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/new" for ::1 at 2016-09-15 12:54:46 -0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 172ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2016-09-15 13:17:59 -0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 69ms (Views: 55.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books" for ::1 at 2016-09-15 13:18:02 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 35.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/new" for ::1 at 2016-09-15 13:18:03 -0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
