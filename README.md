@@ -9,6 +9,7 @@ Rails web application that allows users to share books they have enjoyed to othe
 - Heroku deployment
 - Bcrypt gem for authentication
 - Secure Sockets Layer for information protection over networks
+- Sessions for user login
 
 ## Planning the app:
 
